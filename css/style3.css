@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+     
+}
+body
+{
+    max-width:1366px;
+    background-color:;
+    position: relative;
+}
+
+
+.main
+{
+    margin-left:50px;
+    margin-right:50px;
+}
+.payment-options
+{
+   margin-top:30px;
+   border: 1px solid black;
+   padding:10px;
+   position: relative;
+}
+.payment-options img
+{
+    position: absolute;
+    top:150px;
+    left:745px;
+}
+.payment-options #Name
+{
+    padding: 3px 28px 3px 0px;
+    margin-top:20px;
+    font-size:20px;
+}
+.payment-options #btn1
+{
+    padding: 8px ;
+    margin-left:150px;
+}
+.popup
+{
+    margin-top:20px;
+    margin-left:10px;
+    margin-bottom:10px;
+}
+.net
+{
+    margin-top:20px ;
+}
+#sele
+{
+    padding:5px;
+    margin-top:10px;
+    margin-left:20px;
+}
+.btn-2
+{
+    padding:10px;
+    font-size:20px;
+    margin-left:550px;
+}
+input:focus
+{
+    background-color: rgb(235, 241, 148);
+}
