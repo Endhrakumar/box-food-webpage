@@ -77,16 +77,18 @@ function myFunction() {
         var reg = /^[6789]\d{9}$/;
         if((!mobile.match(reg))){
             alert("Enter your Mobile Number");
-            return false;
+			return false;
         }
-        else if(otp==""){
-            alert("Enter your otp");
-            return false;
-        }
-		else{
-			alert("Welcome to Food Page");
-			return true;
-		}
+       else 
+	   {
+		   if(otp.value=="")
+		   {
+			   alert("Enter Your OTP");
+		   }
+		   else{
+			   return true;
+		   }
+	   }
     }
 
 </script>
