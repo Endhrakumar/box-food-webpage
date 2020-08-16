@@ -1,6 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/style.css" rel="stylesheet">
 <link href="css/style2.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Almendra' rel='stylesheet'>
@@ -17,7 +19,7 @@
 body {
 	top:3%;
 	min-height: 100vh;
-	background-image: linear-gradient(120deg, #F76F51, #FAF5F4);
+	background-image: linear-gradient(120deg, #f01010, #ffd000);
 }
 
 .login-form {
@@ -30,9 +32,11 @@ body {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+}
 </style>
 </head>
 <body>
+
 <script>
 function myFunction() {
   alert("Your Cart is Empty");
@@ -49,18 +53,42 @@ function myFunction() {
 	<li><a onclick="myFunction()">cart</a></li>
 	<li><a href="signup.html">sign in</a></li>
 </div><br><br><br><br>
-<form st  class="login-form">
+
+
+
+<form st  class="login-form" onsubmit="return valid()" >
 	<h1>Sign Up/Login</h1><br>
 	<div class="txtb">
-		<input style="border-radius:10px; padding:5px;" type="text"  placeholder="Mobile Number">
+		<input style="border-radius:10px; padding:5px;" type="text" id="in1" placeholder="Mobile Number">
 	</div><br>
 	<div class="txtb">
-		<input style="border-radius:10px; padding:5px;" type="password" placeholder="OTP">
+		<input style="border-radius:10px; padding:5px;" type="password" id="in" placeholder="OTP">
 	</div><br>
-	<input style="border-radius:10px; padding:3px;" type="submit" value="Login" class="logbtn">
-	<div class="bottom-text" style="visibility:hidden" >
-		Don't have account? <a href="#">Sign up</a>
+	<input style="border-radius:10px; padding:3px;" type="submit" value="Login" id="fin" class="logbtn"><br><br>
+	<div class="bottom-text">Don't have account? <a href="#">Sign up</a>
 	</div>
 </form>
-
 </body>
+
+<script>
+	function valid(){
+        var mobile = document.getElementById("in1").value;
+		var otp=document.getElementById("in");
+        var reg = /^[6789]\d{9}$/;
+        if((!mobile.match(reg))){
+            alert("Enter your Mobile Number");
+            return false;
+        }
+        else if(otp==""){
+            alert("Enter your otp");
+            return false;
+        }
+		else{
+			alert("Welcome to Food Page");
+			return true;
+		}
+    }
+
+</script>
+
+</html>
